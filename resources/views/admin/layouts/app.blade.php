@@ -9,11 +9,12 @@
 
     @viteReactRefresh   
     @vite(['resources/css/app.css', 'resources/js/admin.js'])
+    <link rel="icon" type="image/png" sizes="16x16" href="https://public-files.gumroad.com/7cgkhx8y9f72akfe4iikrqhwkdxs">
 </head>
 <body class="hold-transition sidebar-mini">
     <div id="app">
 
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        {{-- <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
@@ -151,18 +152,15 @@
                     </a>
                 </li>
             </ul>
-        </nav>
+        </nav> --}}
 
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
-
+        {{-- <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <a href="index3.html" class="brand-link">
                 <img src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">AdminLTE 3</span>
             </a>
-
             <div class="sidebar">
-
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
                         <img src="https://adminlte.io/themes/v3/dist/img/user2-160x160.jpg"
@@ -229,13 +227,14 @@
                                 </p>
                             </router-link>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item ml-3">
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <a onclick="event.preventDefault(); this.closest('form').submit();">
-                                    <p>
+                                <a onclick="event.preventDefault(); this.closest('form').submit();" href="">
+                                    <i class="nav-icon fas fa-sign-out-alt"></i>
+                                    <span>
                                         Logout
-                                    </p>
+                                    </span>
                                 </a>
                             </form>
                         </li>
@@ -243,22 +242,20 @@
                 </nav>
 
             </div>
+        </aside> --}}
 
-        </aside>
-
-        <div class="content-wrapper">
+        {{-- <div class="content-wrapper">
            <router-view></router-view>
-        </div>
+        </div> --}}
 
-        <aside class="control-sidebar control-sidebar-dark">
-
+        {{-- <aside class="control-sidebar control-sidebar-dark">
             <div class="p-3">
                 <h5>Title</h5>
                 <p>Sidebar content</p>
             </div>
-        </aside>
+        </aside> --}}
 
-        <footer class="main-footer">
+        {{-- <footer class="main-footer">
 
             <div class="float-right d-none d-sm-inline">
                 Anything you want
@@ -266,9 +263,9 @@
 
             <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
             reserved.
-        </footer>
+        </footer> --}}
     </div>
-    <script>
+    {{-- <script>
         document.addEventListener('DOMContentLoaded', () => {
             const toggleMenuIcon = document.getElementById('toggleMenuIcon');
             const body = document.querySelector('body');
@@ -286,7 +283,7 @@
                 body.classList.add('sidebar-collapse');
             }
         });
-    </script>
+    </script> --}}
 </body>
 
 </html>

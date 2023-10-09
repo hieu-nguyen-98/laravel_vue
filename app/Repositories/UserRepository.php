@@ -82,4 +82,10 @@ class UserRepository implements BaseRepositoryInterface
     public function mulDelete($ids){
         return $this->user->whereIn('id', $ids)->delete();
     }
+
+    public function showUser($request){
+        $profile = $request->user()->only(['id','name', 'email', 'role', 'avatar']);
+        return $profile;
+    }
+    
 }

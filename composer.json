@@ -7,7 +7,9 @@
     "require": {
         "php": "^8.0.2",
         "bensampo/laravel-enum": "^6.6",
+        "cloudinary-labs/cloudinary-laravel": "^2.0.0",
         "guzzlehttp/guzzle": "^7.2",
+        "jrm2k6/cloudder": "0.4.*",
         "laravel/fortify": "^1.18",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",

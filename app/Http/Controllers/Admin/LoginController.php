@@ -27,4 +27,9 @@ class LoginController extends Controller
             dd('tài khoản và mật khẩu chưa chính xác');
         }
     }
+
+    public function logout(){
+        $user = Auth::logout();
+        return response()->json(['success' => true], StatusCode::OK);
+    }
 }

@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
+            $table->string('name_app')->unique();
+            $table->string('email')->nullable();
+            $table->string('phone_1')->nullable();
+            $table->string('phone_2')->nullable();
+            $table->string('address')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('linked')->nullable();
+            $table->string('youtube')->nullable();
             $table->timestamps();
         });
     }

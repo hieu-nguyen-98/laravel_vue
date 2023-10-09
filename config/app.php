@@ -155,7 +155,6 @@ return [
     */
 
     'providers' => [
-
         /*
          * Laravel Framework Service Providers...
          */
@@ -186,6 +185,7 @@ return [
          * Package Service Providers...
          */
         App\Providers\FortifyServiceProvider::class,
+        CloudinaryLabs\CloudinaryLaravel\CloudinaryServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -199,6 +199,7 @@ return [
         App\Providers\UserServiceProvider::class,
         App\Providers\AppointmentServiceProvider::class,
         App\Providers\ClientServiceProvider::class,
+        App\Providers\SettingServiceProvider::class,
 
     ],
 
@@ -215,6 +216,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Cloudinary' => CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary::class,
     ])->toArray(),
 
 ];

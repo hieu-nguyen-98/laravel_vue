@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AppointmentController;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,17 +41,26 @@ Route::middleware(['auth:admin'])->group(function () {
     Route::put('/api/appointments/{id}/edit', [AppointmentController::class, 'update']);
     Route::delete('/api/appointments/{id}', [AppointmentController::class, 'destroy']);
     // End Appoinment
-
     // Start Client
     Route::get('/api/clients', [ClientController::class, 'index']);
     // End Client
-
     // Start Dashboard
     Route::get('/api/stats/appointments', [DashboardController::class, 'appointments']);
     Route::get('/api/stats/users', [DashboardController::class, 'users']);
     // End Dashbaord
+    // Start Setiings
+    Route::get('/api/settings', [SettingController::class, 'settings']);
+    Route::post('/api/settings/{id}', [SettingController::class, 'update']);
+    // End Setiings
+    // Start Profile
+    Route::get('/api/profile', [ProfileController::class, 'index']);
+    Route::put('/api/profile/{id}', [ProfileController::class, 'update']);
+    Route::post('/api/change-user-password/{id}', [ProfileController::class, 'changePassword']);
+    Route::post('/api/upload-profile-image', [ProfileController::class, 'uploadImage']);
+    // End Profile
 });
 Route::post('/api/login', [LoginController::class, 'login']);
 Route::get('admin/login', [LoginController::class, 'index']);
+Route::get('admin/logout', [LoginController::class, 'logout']);
 
 Route::get('{view}', DashboardController::class)->where('view', '(.*)')->middleware('auth:admin');

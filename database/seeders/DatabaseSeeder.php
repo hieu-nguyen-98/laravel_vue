@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeederTable::class);
         $this->call(ClientSeederTable::class);
         $this->call(AppointmentSeederTable::class);
+        $this->call(SettingTableSeeder::class);
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
